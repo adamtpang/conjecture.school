@@ -1,0 +1,35 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+
+# env (HARDENED — secret leak guard)
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# claude code worktrees and local settings (HARDENED — API key leak guard)
+.claude/worktrees/
+.claude/settings.local.json*
+
+# os
+.DS_Store
+Thumbs.db
+
+.vercel
