@@ -1,6 +1,12 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Fraunces, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+export const viewport: Viewport = {
+  themeColor: "#FAF7F2",
+  colorScheme: "light",
+};
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -39,7 +45,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "Conjecture & Refutations",
     type: "website",
-    images: [{ url: "/og.png", width: 1600, height: 800 }],
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
@@ -63,6 +69,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <div className="grain" aria-hidden />
         {children}
+        <Analytics />
       </body>
     </html>
   );
