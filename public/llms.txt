@@ -4,11 +4,12 @@
 
 Conjecture & Refutations is a nineteen-session lecture series run at Network School in Forest City, covering critical rationalism (Deutsch and Popper), Austrian economics as error correction, and memetic money. Every lecture is treated as a conjecture open to refutation. Each session is taught live, recorded, and published, so the recordings act as the proof of work.
 
-It is for the critical rationalist community and anyone at Network School who wants to think through how knowledge grows under criticism. The site is a single landing page that lists the next session, the series arc, the recordings ledger, the Conjecture Institute fellows, and the three co-curators. It is early: most episodes are still planned, and only Episode 01 (a David Deutsch overview) is live.
+It is for the critical rationalist community and anyone at Network School who wants to think through how knowledge grows under criticism. The product packages each session as a lesson (video embed + notes), not a full LMS and not an essay studio. The home page lists the next session, the series arc, the recordings ledger, fellows, and hosts. It is early: most episodes are still planned; Episode 01 Part 1 (David Deutsch overview) is the complete public lesson path.
 
 ## Key links
 - [Home](https://conjecture.school/): the series overview, next session RSVP, recordings ledger, and fellows list.
-- [Watch](https://conjecture.school/#watch): the Episode 01 primer video on Deutsch's two books.
+- [Episode 01 lesson](https://conjecture.school/lessons/ep01): complete lesson path — YouTube embed, lesson notes, outline.
+- [Watch on home](https://conjecture.school/#watch): same Episode 01 primer video on the landing page.
 - [Recordings](https://conjecture.school/#recordings): the running ledger of published sessions.
 - [Fellows](https://conjecture.school/#fellows): people extending the Popperian programme at Conjecture Institute.
 - [Design](https://conjecture.school/design): the site's design system and tokens.

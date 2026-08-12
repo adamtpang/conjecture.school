@@ -1,15 +1,17 @@
 import { EventCard } from "./components/EventCard";
 import { SeriesProgress } from "./components/SeriesProgress";
+import { VideoEmbed } from "./components/VideoEmbed";
 
 type FellowGroup = { label: string; names: string[] };
 type Episode = {
   n: string;
   title: string;
-  status: "Scheduling" | "Planned" | "Recorded";
+  status: "Scheduling" | "Planned" | "Part 1" | "Recorded";
+  href?: string;
 };
 
 const episodes: Episode[] = [
-  { n: "01", title: "David Deutsch: The Fabric of Reality & The Beginning of Infinity", status: "Scheduling" },
+  { n: "01", title: "David Deutsch: The Fabric of Reality & The Beginning of Infinity", status: "Part 1", href: "/lessons/ep01" },
   { n: "02", title: "Reason, Module 1 (Logan Chipkin)", status: "Planned" },
   { n: "03", title: "Reason, Module 2", status: "Planned" },
   { n: "04", title: "Constructor Theory, Module 0", status: "Planned" },
@@ -72,24 +74,52 @@ export default function Home() {
               <span aria-hidden className="transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
-              href="#recordings"
+              href="#watch"
               className="inline-flex items-center px-9 py-4 font-sans text-[12px] uppercase tracking-[0.24em] text-walnut hover:text-accent"
             >
-              See the proof of work
+              Watch the overview
             </a>
           </div>
         </header>
 
         <Ornament />
 
-        {/* II. Next Session */}
-        <Section id="next" n="II" label="Next Session">
+        {/* II. Watch */}
+        <Section id="watch" n="II" label="Watch">
+          <SectionHeading>Start here. The overview.</SectionHeading>
+          <p className="mt-6 max-w-[54ch] text-base leading-relaxed text-walnut">
+            Before the live session, a walking tour of the two books that
+            capture David Deutsch&rsquo;s worldview. Part one of the primer.
+          </p>
+          <div className="mt-14">
+            <VideoEmbed
+              id="cDvdpCBJLmo"
+              kicker="Episode 01 · Part 1"
+              title="David Deutsch: The Fabric of Reality & The Beginning of Infinity"
+            />
+          </div>
+          <p className="mt-8 max-w-[54ch] text-base leading-relaxed text-walnut">
+            Full lesson path: video, notes, and outline on a dedicated page.
+          </p>
+          <a
+            href="/lessons/ep01"
+            className="mt-6 inline-flex items-center gap-3 font-sans text-[12px] uppercase tracking-[0.24em] text-accent hover:text-espresso"
+          >
+            Open Episode 01 lesson
+            <span aria-hidden>→</span>
+          </a>
+        </Section>
+
+        <Ornament />
+
+        {/* III. Next Session */}
+        <Section id="next" n="III" label="Next Session">
           <EventCard
             episode="01"
             title="David Deutsch: The Fabric of Reality & The Beginning of Infinity"
-            startISO="2026-05-16T09:00:00.000Z"
-            endISO="2026-05-16T10:30:00.000Z"
-            tzLabel="Saturday, May 16 · 5:00 PM Malaysia"
+            startISO="2026-05-30T09:00:00.000Z"
+            endISO="2026-05-30T10:30:00.000Z"
+            tzLabel="Saturday, May 30 · 5:00 PM Malaysia"
             locationLabel="Network School, Forest City"
             topic="An overview of the two books that capture David Deutsch's worldview, before we dive into the Conjecture Institute modules in Episodes 02 onward."
             hosts={["Adam Pang", "Sahil Ohe", "Anton Kim"]}
@@ -99,8 +129,8 @@ export default function Home() {
 
         <Ornament />
 
-        {/* III. Series Progress */}
-        <Section id="series" n="III" label="Series">
+        {/* IV. Series Progress */}
+        <Section id="series" n="IV" label="Series">
           <SectionHeading>The arc, in nineteen sessions.</SectionHeading>
           <p className="mt-6 max-w-[54ch] text-base leading-relaxed text-walnut">
             One session per week. Each session a single conjecture, taught
@@ -113,8 +143,8 @@ export default function Home() {
 
         <Ornament />
 
-        {/* IV. Three Threads */}
-        <Section id="threads" n="IV" label="Three Threads">
+        {/* V. Three Threads */}
+        <Section id="threads" n="V" label="Three Threads">
           <SectionHeading>How knowledge grows under criticism.</SectionHeading>
           <ol className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-3 sm:gap-8">
             <ArcCard n="I" title="Good Explanations" byline="Deutsch &amp; Popper"
@@ -128,8 +158,8 @@ export default function Home() {
 
         <Ornament />
 
-        {/* V. Recordings. Proof of work. */}
-        <Section id="recordings" n="V" label="Recordings">
+        {/* VI. Recordings. Proof of work. */}
+        <Section id="recordings" n="VI" label="Recordings">
           <SectionHeading>The proof of work.</SectionHeading>
           <p className="mt-6 max-w-[54ch] text-base leading-relaxed text-walnut">
             Every session is recorded and published here. No claims without the
@@ -147,8 +177,8 @@ export default function Home() {
 
         <Ornament />
 
-        {/* VI. Fellows */}
-        <Section id="fellows" n="VI" label="Fellows">
+        {/* VII. Fellows */}
+        <Section id="fellows" n="VII" label="Fellows">
           <SectionHeading>The lineage.</SectionHeading>
           <p className="mt-6 max-w-[54ch] text-base leading-relaxed text-walnut">
             People extending the Popperian programme at{" "}
@@ -166,8 +196,8 @@ export default function Home() {
 
         <Ornament />
 
-        {/* VII. Hosts */}
-        <Section id="hosts" n="VII" label="Hosts">
+        {/* VIII. Hosts */}
+        <Section id="hosts" n="VIII" label="Hosts">
           <SectionHeading>Three co-curators at Network School.</SectionHeading>
           <ul className="mt-12 space-y-3 text-xl text-espresso/90 sm:text-2xl">
             {hosts.map((h) => (
@@ -227,7 +257,8 @@ function Nav() {
           <span className="sm:hidden">C&amp;R</span>
         </a>
         <div className="flex items-center gap-6 text-[11px] uppercase tracking-[0.18em]">
-          <a href="#recordings" className="hidden text-walnut hover:text-accent sm:inline">Recordings</a>
+          <a href="#watch" className="hidden text-walnut hover:text-accent sm:inline">Watch</a>
+          <a href="#recordings" className="hidden text-walnut hover:text-accent md:inline">Recordings</a>
           <a href="https://ns.com/events/gjts20md" target="_blank" rel="noopener noreferrer" className="text-accent hover:text-espresso">RSVP</a>
         </div>
       </div>
@@ -280,11 +311,44 @@ function ArcCard({ n, title, byline, body }: { n: string; title: string; byline:
 }
 
 function EpisodeRow({ episode }: { episode: Episode }) {
+  const live = episode.status === "Part 1" || episode.status === "Recorded";
+  const inner = (
+    <>
+      <span className="font-mono text-sm text-accent">{episode.n}</span>
+      <span
+        className={`font-serif text-lg leading-snug ${
+          episode.href ? "text-espresso/90 group-hover:text-accent" : "text-espresso/90"
+        }`}
+      >
+        {episode.title}
+      </span>
+      <span
+        className={`text-[11px] uppercase tracking-[0.2em] ${
+          live ? "text-accent" : "text-taupe"
+        }`}
+      >
+        {episode.status}
+        {episode.href ? <span aria-hidden className="ml-2">→</span> : null}
+      </span>
+    </>
+  );
+
+  if (episode.href) {
+    return (
+      <li>
+        <a
+          href={episode.href}
+          className="group grid grid-cols-[3rem_1fr_auto] items-baseline gap-4 py-5"
+        >
+          {inner}
+        </a>
+      </li>
+    );
+  }
+
   return (
     <li className="grid grid-cols-[3rem_1fr_auto] items-baseline gap-4 py-5">
-      <span className="font-mono text-sm text-accent">{episode.n}</span>
-      <span className="font-serif text-lg leading-snug text-espresso/90">{episode.title}</span>
-      <span className="text-[11px] uppercase tracking-[0.2em] text-taupe">{episode.status}</span>
+      {inner}
     </li>
   );
 }

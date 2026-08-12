@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="1600" height="800">
+  <defs>
+    <style>
+      .label { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 400; fill: #8B5A3C; letter-spacing: 2.5px; }
+      .meta  { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 400; fill: #9A8F84; letter-spacing: 2px; }
+      .foot  { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 400; fill: #9A8F84; letter-spacing: 2px; }
+      .quote { font-family: 'Fraunces', Georgia, serif; font-style: italic; font-weight: 300; fill: #2B2622; }
+      .book  { font-family: 'Fraunces', Georgia, serif; font-weight: 300; fill: #5C5048; }
+      .amp   { fill: #8B5A3C; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="800" fill="#FAF7F2"/>
+
+  <!-- constellation in walnut, low opacity -->
+  <g fill="#8B5A3C">
+    <circle cx="120" cy="90" r="2.4" opacity="0.32"/>
+    <circle cx="240" cy="60" r="1.5" opacity="0.22"/>
+    <circle cx="420" cy="110" r="1.9" opacity="0.27"/>
+    <circle cx="640" cy="50" r="1.3" opacity="0.18"/>
+    <circle cx="1080" cy="90" r="2.5" opacity="0.32"/>
+    <circle cx="1300" cy="60" r="1.5" opacity="0.22"/>
+    <circle cx="1480" cy="130" r="1.8" opacity="0.25"/>
+    <circle cx="180" cy="650" r="1.4" opacity="0.18"/>
+    <circle cx="360" cy="700" r="2.0" opacity="0.27"/>
+    <circle cx="560" cy="680" r="1.6" opacity="0.22"/>
+    <circle cx="900" cy="720" r="1.3" opacity="0.18"/>
+    <circle cx="1140" cy="650" r="1.9" opacity="0.27"/>
+    <!-- ∴ cluster, lower right -->
+    <circle cx="1380" cy="660" r="3.2" opacity="0.45"/>
+    <circle cx="1340" cy="730" r="3.2" opacity="0.45"/>
+    <circle cx="1420" cy="730" r="3.2" opacity="0.45"/>
+  </g>
+
+  <text x="800" y="100" text-anchor="middle" class="label" font-size="18">EPISODE 01  ·  CONJECTURE <tspan class="amp">&amp;</tspan> REFUTATIONS</text>
+
+  <line x1="720" y1="135" x2="880" y2="135" stroke="#E5DDD2" stroke-width="1"/>
+
+  <text x="800" y="320" text-anchor="middle" class="quote" font-size="90">&#8220;Read these two books</text>
+  <text x="800" y="428" text-anchor="middle" class="quote" font-size="90">first.&#8221;</text>
+
+  <text x="800" y="490" text-anchor="middle" class="meta" font-size="18">NAVAL RAVIKANT</text>
+
+  <g transform="translate(800,545)">
+    <line x1="-90" y1="0" x2="-22" y2="0" stroke="#E5DDD2" stroke-width="1"/>
+    <text x="0" y="6" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="22" fill="#8B5A3C" opacity="0.7">&#10022;</text>
+    <line x1="22" y1="0" x2="90" y2="0" stroke="#E5DDD2" stroke-width="1"/>
+  </g>
+
+  <text x="800" y="615" text-anchor="middle" class="book" font-size="38">The Fabric of Reality</text>
+  <text x="800" y="665" text-anchor="middle" class="book" font-size="38">The Beginning of Infinity</text>
+
+  <text x="800" y="700" text-anchor="middle" class="meta" font-size="15">DAVID DEUTSCH</text>
+
+  <text x="800" y="760" text-anchor="middle" class="foot" font-size="14">NETWORK SCHOOL  ·  SAT MAY 16  ·  CONJECTURE.SCHOOL</text>
+</svg>
