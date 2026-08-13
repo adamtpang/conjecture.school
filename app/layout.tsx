@@ -56,6 +56,30 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Conjecture & Refutations",
+      url: siteUrl,
+      description,
+      logo: `${siteUrl}/og.png`,
+      sameAs: ["https://conjectureinstitute.org", "https://x.com/adamtpang"],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      name: "Conjecture & Refutations",
+      url: siteUrl,
+      description,
+      publisher: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "en",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -70,6 +94,11 @@ export default function RootLayout({
         <div className="grain" aria-hidden />
         {children}
         <Analytics />
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   );
