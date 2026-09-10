@@ -1,3 +1,4 @@
+import SiteAnalytics from './SiteAnalytics';
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Fraunces, Inter, Geist_Mono } from "next/font/google";
@@ -99,6 +100,8 @@ export default function RootLayout({
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+      <footer style={{ padding: 16, textAlign: "center", fontSize: 12 }}><a href="/privacy">Privacy</a></footer>
+        <SiteAnalytics />
       </body>
     </html>
   );
