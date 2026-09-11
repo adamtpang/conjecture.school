@@ -1,6 +1,5 @@
 import SiteAnalytics from './SiteAnalytics';
 import type { Metadata, Viewport } from "next";
-import { Analytics } from "@vercel/analytics/react";
 import { Fraunces, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -94,7 +93,6 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <div className="grain" aria-hidden />
         {children}
-        <Analytics />
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
