@@ -21,8 +21,13 @@
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.20",
     "postcss": "^8",
-    "sharp": "^0.34.5",
+    "sharp": "^0.35.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
+  },
+  "overrides": {
+    "browserslist": "4.28.7",
+    "dompurify": "3.4.17",
+    "source-map-js": "1.2.2"
   }
 }
